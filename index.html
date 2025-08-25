@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMSM AI - مساعد الذكاء الاصطناعي</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- القائمة الجانبية -->
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <img src="ai-logo.png" alt="SMSM AI Logo" class="sidebar-logo">
+            <h2>SMSM AI</h2>
+            <button id="closeSidebar" class="close-btn">&times;</button>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#" onclick="showSection('chat')">المحادثة الرئيسية</a></li>
+                <li><a href="#" onclick="showSection('features')">الميزات</a></li>
+                <li><a href="#" onclick="showSection('about')">حول اليوتيوبر</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- الخلفية المظلمة للقائمة الجانبية -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="main-container">
+        <!-- الهيدر -->
+        <header class="header">
+            <button id="menuBtn" class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="header-title">
+                <img src="ai-logo.png" alt="SMSM AI Logo" class="header-logo">
+                <h1>SMSM AI</h1>
+            </div>
+            <button id="themeToggle" class="theme-toggle" title="تبديل الوضع الداكن">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </header>
+
+        <!-- قسم المحادثة الرئيسي -->
+        <section id="chat" class="section active">
+            <div class="chat-container">
+                <div id="chatMessages" class="chat-messages">
+                    <div class="message ai-message">
+                        <img src="ai-logo.png" alt="SMSM AI" class="message-avatar">
+                        <div class="message-content">
+                            <p>أهلاً بك في SMSM AI! يمكنك سؤالي عن أي شيء تريده. جرب أن تسألني عن الرياضيات، الكتابة، الألعاب، أو أي موضوع آخر!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <div class="input-wrapper">
+                        <input type="text" id="messageInput" placeholder="اكتب رسالتك هنا..." class="message-input">
+                        <img src="send_button.png" alt="إرسال" id="sendBtn" class="send-btn">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الميزات -->
+        <section id="features" class="section">
+            <div class="content-container">
+                <h2>ميزات SMSM AI</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🧮</div>
+                        <h3>حل المسائل الرياضية</h3>
+                        <p>يمكنني مساعدتك في حل المسائل الرياضية البسيطة والمعقدة</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✍️</div>
+                        <h3>كتابة التعبيرات</h3>
+                        <p>أساعدك في كتابة تعبيرات ومقالات عن مواضيع مختلفة</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💬</div>
+                        <h3>المحادثة المتنوعة</h3>
+                        <p>أتحدث معك عن الرياضة، الطبخ، السفر، الموسيقى وأكثر</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>البحث في الإنترنت</h3>
+                        <p>أساعدك في العثور على المعلومات التي تحتاجها</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎮</div>
+                        <h3>الألعاب والتكنولوجيا</h3>
+                        <p>متخصص في مواضيع الألعاب والتكنولوجيا الحديثة</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم حول اليوتيوبر -->
+        <section id="about" class="section">
+            <div class="content-container">
+                <h2>حول اليوتيوبر</h2>
+                <div class="about-content">
+                    <div class="youtube-info">
+                        <h3>SMSM for Games</h3>
+                        <p class="channel-description">
+                           قناة SMSM for Games تقدم محتوى ممتع ومفيد عن الألعاب والتحديات. نهدف إلى تقديم تجربة ترفيهية وتعليمية للمشاهدين من خلال مراجعات الألعاب، النصائح التقنية، والمحتوى التفاعلي.
+                        </p>
+                        
+                        <div class="channel-stats">
+                            <div class="stat">
+                                <span class="stat-label">الهدف:</span>
+                                <span class="stat-value">الوصول إلى 1000 مشترك</span>
+                            </div>
+                        </div>
+                        
+                        <div class="channel-link">
+                            <a href="https://youtube.com/@smsmgames18?si=z6sD-h2o9GVbN7oW" target="_blank" class="youtube-btn">
+                                زيارة القناة على يوتيوب
+                            </a>
+                        </div>
+                        
+                        <div class="support-message">
+                            <p>ادعم القناة بالاشتراك والإعجاب لتساعدنا في الوصول إلى هدفنا!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <script src="script_enhanced.js"></script>
+</body>
+</html>
+
